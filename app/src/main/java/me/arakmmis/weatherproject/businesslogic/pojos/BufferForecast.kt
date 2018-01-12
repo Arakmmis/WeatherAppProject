@@ -14,10 +14,6 @@ class BufferForecast(
         var city: City) {
 
     class City(
-            @SerializedName("id")
-            @Expose
-            var id: Int,
-
             @SerializedName("name")
             @Expose
             var name: String,
@@ -60,10 +56,18 @@ class BufferForecast(
     class Wind(
             @SerializedName("speed")
             @Expose
-            var speed: Double,
-
-            @SerializedName("deg")
-            @Expose
-            var deg: Double
+            var speed: Double
     )
+
+    fun toForecast(): Forecast {
+        return Forecast(
+                id = list[0].dt.toString() + city.name + city.country,
+                cityName = city.name,
+                countryName = city.country,
+                dt = list[0].dt,
+                temp = list[0].main.temp,
+                weatherDesc = list[0].weather[0].main,
+                windSpeed = list[0].wind.speed
+        )
+    }
 }

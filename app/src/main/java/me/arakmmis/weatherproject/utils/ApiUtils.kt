@@ -1,5 +1,6 @@
 package me.arakmmis.weatherproject.utils
 
+import me.arakmmis.weatherproject.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -25,5 +26,9 @@ object ApiUtils {
                 .connectTimeout(60, TimeUnit.SECONDS)
 
         return httpClient.build()
+    }
+
+    fun getApiKey(): String {
+        return BuildConfig.MY_API_KEY ?: "b6907d289e10d714a6e88b30761fae22"
     }
 }
