@@ -20,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes.each {
+        it.buildConfigField "String", "MY_API_KEY", getMyApiKey("api_key")
+    }
 }
 
 dependencies {
@@ -42,4 +45,10 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+}
+
+static def getMyApiKey(String property) {
+    Properties properties = new Properties()
+    properties.load(new FileInputStream("E:\\Projects\\AndroidStudioProjects\\Other\\WeatherProject\\api_key.txt"))
+    return "\"" + properties.getProperty(property) + "\""
 }
