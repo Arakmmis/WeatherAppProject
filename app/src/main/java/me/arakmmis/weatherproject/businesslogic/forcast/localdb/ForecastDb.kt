@@ -2,7 +2,7 @@ package me.arakmmis.weatherproject.businesslogic.forcast.localdb
 
 import io.reactivex.Single
 import me.arakmmis.weatherproject.businesslogic.forcast.ForecastManager
-import me.arakmmis.weatherproject.businesslogic.pojos.Forecast
+import me.arakmmis.weatherproject.businesslogic.models.Forecast
 
 class ForecastDb : ForecastManager {
 

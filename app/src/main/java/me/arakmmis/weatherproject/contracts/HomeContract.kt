@@ -1,6 +1,6 @@
 package me.arakmmis.weatherproject.contracts
 
-import me.arakmmis.weatherproject.businesslogic.pojos.Forecast
+import me.arakmmis.weatherproject.businesslogic.models.Forecast
 
 interface HomeContract {
 

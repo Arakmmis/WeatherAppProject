@@ -6,13 +6,13 @@ import io.reactivex.schedulers.Schedulers
 import me.arakmmis.weatherproject.businesslogic.forcast.ForecastManager
 import me.arakmmis.weatherproject.businesslogic.forcast.localdb.ForecastDb
 import me.arakmmis.weatherproject.businesslogic.forcast.remote.ForecastRepo
-import me.arakmmis.weatherproject.businesslogic.pojos.Forecast
+import me.arakmmis.weatherproject.businesslogic.models.Forecast
 import me.arakmmis.weatherproject.contracts.HomeContract
 import me.arakmmis.weatherproject.utils.App
 import me.arakmmis.weatherproject.utils.Cache
 import me.arakmmis.weatherproject.utils.ConnectivityUtils
 
-class HomePresenter(val view: HomeContract.HomeView) : HomeContract.HomePresenter {
+class HomePresenter(private val view: HomeContract.HomeView) : HomeContract.HomePresenter {
 
     private val forecastManager: ForecastManager
 

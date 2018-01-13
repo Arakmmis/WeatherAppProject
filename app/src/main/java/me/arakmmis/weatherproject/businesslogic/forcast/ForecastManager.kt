@@ -1,7 +1,7 @@
 package me.arakmmis.weatherproject.businesslogic.forcast
 
 import io.reactivex.Single
-import me.arakmmis.weatherproject.businesslogic.pojos.Forecast
+import me.arakmmis.weatherproject.businesslogic.models.Forecast
 
 interface ForecastManager {
 

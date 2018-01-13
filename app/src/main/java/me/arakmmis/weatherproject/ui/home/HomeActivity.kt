@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_home.*
 import me.arakmmis.weatherproject.R
-import me.arakmmis.weatherproject.businesslogic.pojos.Forecast
+import me.arakmmis.weatherproject.businesslogic.models.Forecast
 import me.arakmmis.weatherproject.contracts.HomeContract
 
 class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
@@ -33,11 +34,12 @@ class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
     }
 
     override fun setViews(forecast: Forecast) {
-        city_name.text = forecast.cityName
-        country_name.text = forecast.countryName
-        weather_desc.text = forecast.weatherDesc
-        wind_speed.text = forecast.windSpeed.toString()
-        temp.text = forecast.temp.toString()
-        date_time.text = forecast.dt.toString()
+        city_name.text = forecast.city
+        weather_desc.text = forecast.weather[0].desc
+        wind_speed.text = forecast.wind[0].speed.toString()
+        temp.text = forecast.temp[0].temp.toString()
+        date_time.text = forecast.dt[4].dt.toString()
+
+        Glide.with(this@HomeActivity).load(forecast.weather[4].getDescPic()).into(image)
     }
 }

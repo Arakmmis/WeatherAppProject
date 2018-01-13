@@ -1,7 +1,7 @@
 package me.arakmmis.weatherproject.businesslogic.forcast.remote
 
 import io.reactivex.Single
-import me.arakmmis.weatherproject.businesslogic.pojos.BufferForecast
+import me.arakmmis.weatherproject.businesslogic.models.BufferForecast
 import retrofit2.http.GET
 import retrofit2.http.Query
 
