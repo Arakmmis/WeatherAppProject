@@ -1,5 +1,6 @@
 package me.arakmmis.weatherproject.ui.home
 
+import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import me.arakmmis.weatherproject.businesslogic.forcast.ForecastManager
@@ -26,14 +27,19 @@ class HomePresenter(val view: HomeContract.HomeView) : HomeContract.HomePresente
     }
 
     private fun getForecast() {
+        view.toggleLoading()
+
         forecastManager.getForecastFor(Cache.getCurrentCity())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe { forecast: Forecast?, e: Throwable? ->
                     if (forecast != null) {
-
+                        view.toggleLoading()
+                        view.setViews(forecast)
                     } else {
-
+                        view.toggleLoading()
+                        view.toast("Failed to load weather data")
+                        Log.e("HP:error", e?.toString())
                     }
                 }
     }
