@@ -1,4 +1,4 @@
-package me.arakmmis.weatherproject.businesslogic.forcast.remote
+package me.arakmmis.weatherproject.businesslogic.forecast.remote
 
 import io.reactivex.Single
 import me.arakmmis.weatherproject.businesslogic.models.BufferForecast

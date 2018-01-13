@@ -20,6 +20,7 @@ open class Weather(
             "broken clouds" -> return if (isAM) R.drawable.clouds else R.drawable.clouds_night
             "shower rain" -> return if (isAM) R.drawable.showers_day else R.drawable.showers_night
             "rain" -> return if (isAM) R.drawable.rain_day else R.drawable.rain_night
+            "light rain" -> return if (isAM) R.drawable.rain_day else R.drawable.rain_night
             "thunderstorm" -> return if (isAM) R.drawable.storm_day else R.drawable.storm_night
             "snow" -> return if (isAM) R.drawable.snow_scattered_day else R.drawable.snow_scattered_night
             "mist" -> return R.drawable.mist
