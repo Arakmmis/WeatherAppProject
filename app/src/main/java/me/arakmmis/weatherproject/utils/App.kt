@@ -2,6 +2,7 @@ package me.arakmmis.weatherproject.utils
 
 import android.app.Application
 import com.orhanobut.hawk.Hawk
+import io.realm.Realm
 
 class App : Application() {
     init {
@@ -11,7 +12,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         Hawk.init(this).build()
-//        Realm.init(this)
+        Realm.init(this)
     }
 
     companion object {
