@@ -53,6 +53,10 @@ class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
                 openChooserDialog()
                 true
             }
+            R.id.action_refresh -> {
+                presenter.selectedCity(Cache.getCurrentCity())
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

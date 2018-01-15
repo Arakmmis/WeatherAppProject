@@ -7,4 +7,5 @@
     <string name="istanbul_tr">Istanbul, TR</string>
     <string name="berlin_de">Berlin, DE</string>
     <string name="kuala_lumpur_my">Kuala Lumpur, MY</string>
+    <string name="refresh">Refresh</string>
 </resources>
