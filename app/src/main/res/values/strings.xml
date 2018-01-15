@@ -1,11 +1,37 @@
 <resources>
     <string name="app_name">WeatherProject</string>
+
+    <!--
+        Menu
+    -->
     <string name="pick_another_city">Pick another city</string>
+    <string name="refresh">Refresh</string>
+
+    <!--
+        Dialog
+    -->
     <string name="pick_a_city_to_forecast">PICK A CITY TO FORECAST</string>
     <string name="alexandria_eg">Alexandria, EG</string>
     <string name="tokyo_jp">Tokyo, JP</string>
     <string name="istanbul_tr">Istanbul, TR</string>
     <string name="berlin_de">Berlin, DE</string>
     <string name="kuala_lumpur_my">Kuala Lumpur, MY</string>
-    <string name="refresh">Refresh</string>
+
+    <!--
+        Home Placeholders
+    -->
+    <string name="absolute_zero">-273 °K</string>
+    <string name="somewhere_unknown_to_man">SOMEWHERE UNKNOWN TO MAN</string>
+    <string name="it_s_freezing_cold_people">It\'s freezing cold people!</string>
+    <string name="whichever_day_this_is_just_let_it_end">Whichever day this is, just let it end!!</string>
+
+    <!--
+        Contact Us
+    -->
+    <string name="reach_me_at"><u>Reach me at</u></string>
+    <string name="phone_number">+20 11 273 00411</string>
+    <string name="email_address">arakmmis@gmail.com</string>
+    <string name="title">Android Developer</string>
+    <string name="name">ABDEL RAHMAN SHALTOOT</string>
+    <string name="contact_us">Contact Us</string>
 </resources>

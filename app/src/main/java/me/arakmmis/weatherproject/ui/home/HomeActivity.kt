@@ -11,13 +11,14 @@ import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import io.realm.RealmList
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.dialog_city_picker.view.*
+import kotlinx.android.synthetic.main.home_activity.*
+import kotlinx.android.synthetic.main.home_dialog_city_picker.view.*
 import me.arakmmis.weatherproject.R
 import me.arakmmis.weatherproject.businesslogic.models.Forecast
 import me.arakmmis.weatherproject.businesslogic.models.Temperature
 import me.arakmmis.weatherproject.businesslogic.models.Weather
 import me.arakmmis.weatherproject.contracts.HomeContract
+import me.arakmmis.weatherproject.ui.contactus.ContactUsActivity
 import me.arakmmis.weatherproject.ui.home.adapter.FutureForecastAdapter
 import me.arakmmis.weatherproject.utils.Cache
 import java.util.*
@@ -30,7 +31,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.home_activity)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -57,12 +58,16 @@ class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
                 presenter.selectedCity(Cache.getCurrentCity())
                 true
             }
+            R.id.action_contact_us -> {
+                ContactUsActivity.start(this@HomeActivity)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     private fun openChooserDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_city_picker, null)
+        val dialogView = layoutInflater.inflate(R.layout.home_dialog_city_picker, null)
         val alertDialog = AlertDialog.Builder(this).setView(dialogView).create()
 
         when (Cache.getCurrentCity().toLowerCase()) {
@@ -133,7 +138,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.HomeView {
 
         if (adapterFutureForecasts == null) {
             adapterFutureForecasts = FutureForecastAdapter(
-                    R.layout.rv_item_future_forecasts,
+                    R.layout.home_rv_item_future_forecasts,
                     getForecastsList(forecast)
             )
             rv_future_forecasts.adapter = adapterFutureForecasts

@@ -3,7 +3,7 @@ package me.arakmmis.weatherproject.ui.home.adapter
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.rv_item_future_forecasts.view.*
+import kotlinx.android.synthetic.main.home_rv_item_future_forecasts.view.*
 import me.arakmmis.weatherproject.businesslogic.models.Forecast
 import java.util.*
 

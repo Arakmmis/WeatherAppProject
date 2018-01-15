@@ -27,7 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
     compile "com.android.support:support-v13:26.1.0"
     compile "com.android.support:design:26.1.0"
@@ -47,6 +47,9 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    // Rounded Image View
+    compile 'com.makeramen:roundedimageview:2.2.1'
 }
 
 static def getMyApiKey(String property) {

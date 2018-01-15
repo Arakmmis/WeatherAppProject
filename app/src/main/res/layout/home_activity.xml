@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:paddingTop="16dp"
-            android:text="-273 &#xb0;K"
+            android:text="@string/absolute_zero"
             android:textSize="40sp"/>
 
         <ImageView
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center_horizontal"
-            android:text="SOMEWHERE UNKNOWN TO MAN"
+            android:text="@string/somewhere_unknown_to_man"
             android:textSize="28sp"/>
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
-            android:text="It's freezing cold people!"
+            android:text="@string/it_s_freezing_cold_people"
             android:textSize="20sp"/>
 
         <TextView
@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Whichever day this is, just let it end!!"
+            android:text="@string/whichever_day_this_is_just_let_it_end"
             android:textSize="16sp"/>
 
         <View
