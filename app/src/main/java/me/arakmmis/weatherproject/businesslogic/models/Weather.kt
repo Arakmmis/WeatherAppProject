@@ -16,6 +16,7 @@ open class Weather(
         when (secondaryDesc.toLowerCase()) {
             "clear sky" -> return if (isAM) R.drawable.clear else R.drawable.clear_night
             "few clouds" -> return if (isAM) R.drawable.few_clouds else R.drawable.few_clouds_night
+            "overcast clouds" -> return if (isAM) R.drawable.few_clouds else R.drawable.few_clouds_night
             "scattered clouds" -> return if (isAM) R.drawable.clouds else R.drawable.clouds_night
             "broken clouds" -> return if (isAM) R.drawable.clouds else R.drawable.clouds_night
             "shower rain" -> return if (isAM) R.drawable.showers_day else R.drawable.showers_night
