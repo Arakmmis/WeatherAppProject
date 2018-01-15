@@ -43,4 +43,10 @@ class HomePresenter(private val view: HomeContract.HomeView) : HomeContract.Home
                     }
                 }
     }
+
+    override fun selectedCity(city: String) {
+        Cache.setCurrentCity(city)
+
+        getForecast()
+    }
 }

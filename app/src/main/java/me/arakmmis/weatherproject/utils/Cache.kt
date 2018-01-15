@@ -8,7 +8,7 @@ object Cache {
 
     fun getCurrentCity(): String {
         if (!Hawk.contains(Const.CURRENT_CITY)) {
-            return "Alexandria,EG"
+            return "Alexandria, EG"
         }
 
         return Hawk.get(Const.CURRENT_CITY)

@@ -13,6 +13,6 @@ interface HomeContract {
     }
 
     interface HomePresenter {
-
+        fun selectedCity(city: String)
     }
 }

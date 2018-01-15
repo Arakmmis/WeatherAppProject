@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WeatherProject</string>
+    <string name="pick_another_city">Pick another city</string>
+    <string name="pick_a_city_to_forecast">PICK A CITY TO FORECAST</string>
+    <string name="alexandria_eg">Alexandria, EG</string>
+    <string name="tokyo_jp">Tokyo, JP</string>
+    <string name="istanbul_tr">Istanbul, TR</string>
+    <string name="berlin_de">Berlin, DE</string>
+    <string name="kuala_lumpur_my">Kuala Lumpur, MY</string>
 </resources>
