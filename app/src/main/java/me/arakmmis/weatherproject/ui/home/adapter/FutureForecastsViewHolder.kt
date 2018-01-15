@@ -16,7 +16,8 @@ class FutureForecastsViewHolder<in T>(itemView: View?) : RecyclerView.ViewHolder
 
         Glide.with(itemView.context).load(forecast.weather[0].getDescPic()).into(itemView?.iv_temp_pic)
 
-        itemView?.tv_day?.text = when (adapterPosition + 1) {
+        val dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+        itemView?.tv_day?.text = when (dayOfWeek + adapterPosition + 1) {
             1 -> "SUN"
             2 -> "MON"
             3 -> "TUES"
